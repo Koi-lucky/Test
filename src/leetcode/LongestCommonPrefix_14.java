@@ -40,26 +40,26 @@ public class LongestCommonPrefix_14 {
             }
         }
         // 2.设置一个临时变量用于存储前缀相同的值
-        String ss = " ";// 过程变量
-        String sss = " ";// 存储最终数据的变量
+        StringBuilder ss = new StringBuilder();// 过程变量
+        StringBuilder sss = new StringBuilder();// 存储最终数据的变量
         // 3.遍历数组每一个值，每个值的每一位与哈希表进行比较，
         // 若包含则向变量中加入这个字符，
         // 不包含则进行下一个数组值的判断
         for (int i = 0; i < strs.length; i++) {
             for (int j = 0; j < strs[i].length(); j++) {
                 if (set.contains(strs[i].substring(j, j + 1))) {
-                    ss += strs[i].substring(j, j + 1);
+                    ss = ss.append(strs[i].substring(j, j + 1));
                 } else {
                     continue;
                 }
             }
             if (ss.length() < sss.length()) {
-                sss = ss + "";
-                ss = "";
+                sss = ss;
+                ss = ss.delete(0, ss.length() - 1);
             } else {
-                ss = "";
+                ss = ss.delete(0, ss.length() - 1);
             }
         }
-        System.out.println(sss);
+        System.out.println(sss.toString());
     }
 }
