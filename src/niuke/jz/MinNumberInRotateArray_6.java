@@ -6,6 +6,11 @@ public class MinNumberInRotateArray_6 {
 
     int[] numbers = { 1, 1, 0, 1, 1, 1, 1};
 
+    /**
+     * 题目：旋转数组查找数组最小值 —— 二分查找的变式
+     * 思路分析：
+     * 1.
+     */
     @Test
     public void minNumberInRotateArray() {
         // 特殊情况判断
