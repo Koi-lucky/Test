@@ -2,6 +2,9 @@ package leetcode;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 /**
  * TODO
  *
@@ -25,5 +28,6 @@ public class IsMonotonic {
             }
         }
         System.out.println(inc || dec);
+
     }
 }
