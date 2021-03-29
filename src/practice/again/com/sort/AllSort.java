@@ -146,12 +146,11 @@ public class AllSort {
             // 交换两个数
             swapData(arr[l], arr[r]);
             // 交换完之后，再进行判断
-            // 如果arr[l]==arr[mid],将r前移一位；如果arr[r]==arr[mid],将l后移一位
             if (arr[l] == arr[mid]) {
-                r--;
+                l++;
             }
             if (arr[r] == arr[mid]) {
-                l++;
+                r--;
             }
         }
         // 循环结束后，如果l==r，就需要将两个指针错开，以防栈溢出
